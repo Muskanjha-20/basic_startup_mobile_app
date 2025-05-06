@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/constants/colors.dart';
+import 'package:startup_social_app/constants/colors.dart';
 
 class RecentPostHashTagWidget extends StatelessWidget {
   const RecentPostHashTagWidget({super.key});

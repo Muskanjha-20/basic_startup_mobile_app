@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/constants/colors.dart';
-import 'package:startup_social_app/view/custom/app_bar/custom_app_bar.dart';
-import 'package:startup_social_app/view/custom/buttons/custom_submit_button.dart';
-import 'package:startup_social_app/view/custom/group_and_community_updates_profile_custom_card.dart';
-import 'package:startup_social_app/view/custom/list_social_industry_select_widget.dart';
-import 'package:startup_social_app/view/custom/detailed_recent_post_widget.dart';
-import 'package:startup_social_app/view/custom/recent_message_chat.dart';
-import 'package:startup_social_app/view/custom/add_story_list_widgets.dart';
-import 'package:startup_social_app/view/custom/text_header.dart';
+import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/custom/app_bar/custom_app_bar.dart';
+import 'package:startup_social_app/custom/buttons/custom_submit_button.dart';
+import 'package:startup_social_app/custom/group_and_community_updates_profile_custom_card.dart';
+import 'package:startup_social_app/custom/list_social_industry_select_widget.dart';
+import 'package:startup_social_app/custom/detailed_recent_post_widget.dart';
+import 'package:startup_social_app/custom/recent_message_chat.dart';
+import 'package:startup_social_app/custom/add_story_list_widgets.dart';
+import 'package:startup_social_app/custom/text_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

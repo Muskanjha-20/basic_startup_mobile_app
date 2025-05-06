@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/constants/colors.dart';
-import 'package:startup_social_app/view/custom/recent_post_hash_tag_widget.dart';
+import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/custom/recent_post_hash_tag_widget.dart';
 
 class DetailedRecentPostWidget extends StatelessWidget {
   const DetailedRecentPostWidget({super.key});

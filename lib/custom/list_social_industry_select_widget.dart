@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/constants/colors.dart';
+import 'package:startup_social_app/constants/colors.dart';
 
 class ListSocialIndustrySelectWidget extends StatefulWidget {
   final String label;
 
-  const ListSocialIndustrySelectWidget({Key? key, required this.label})
-    : super(key: key);
+  const ListSocialIndustrySelectWidget({super.key, required this.label});
 
   @override
   _ListSocialIndustrySelectWidgetState createState() =>
