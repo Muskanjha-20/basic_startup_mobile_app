@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/screens/widget/story_image_card_widget.dart';
+import 'package:startup_social_app/view/widget/story_image_card_widget.dart';
 
 class ListAddStoryCardWidget extends StatelessWidget {
   const ListAddStoryCardWidget({super.key});

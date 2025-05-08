@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:startup_social_app/utils/colors.dart';
-import 'package:startup_social_app/view/screens/widget/custom_hash_tag_widget.dart';
+import 'package:startup_social_app/view/widget/custom_hash_tag_widget.dart';
 
 class PostDetailWidget extends StatelessWidget {
   const PostDetailWidget({super.key});

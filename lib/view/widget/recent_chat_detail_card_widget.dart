@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:startup_social_app/utils/colors.dart';
 
-class RecentChatWidget extends StatelessWidget {
+class RecentChatDetailCardWidget extends StatefulWidget {
   final String profileUrl;
   final String name;
   final String message;
   final String date;
 
-  const RecentChatWidget({
+  const RecentChatDetailCardWidget({
     super.key,
     required this.profileUrl,
     required this.name,
@@ -16,6 +16,13 @@ class RecentChatWidget extends StatelessWidget {
   });
 
   @override
+  State<RecentChatDetailCardWidget> createState() =>
+      _RecentChatDetailCardWidgetState();
+}
+
+class _RecentChatDetailCardWidgetState
+    extends State<RecentChatDetailCardWidget> {
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
@@ -23,14 +30,14 @@ class RecentChatWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ClipOval(child: Image.asset(profileUrl)),
+          ClipOval(child: Image.asset(widget.profileUrl)),
           SizedBox(width: 8),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                name,
+                widget.name,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
@@ -38,7 +45,7 @@ class RecentChatWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                message,
+                widget.message,
                 style: TextStyle(
                   color: AppColors.greyTextColor,
                   fontSize: 11,
@@ -51,7 +58,7 @@ class RecentChatWidget extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: Text(
-              date,
+              widget.date,
               style: TextStyle(
                 color: AppColors.greyTextColor,
                 fontSize: 11,

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:startup_social_app/utils/colors.dart';
-import 'package:startup_social_app/view/screens/widget/custom_app_bar.dart';
-import 'package:startup_social_app/view/screens/widget/custom_submit_button.dart';
-import 'package:startup_social_app/view/screens/widget/group_and_community_updates_profile_custom_card.dart';
-import 'package:startup_social_app/view/screens/widget/social_industry_select_widget.dart';
-import 'package:startup_social_app/view/screens/widget/post_detail_widget.dart';
-import 'package:startup_social_app/view/screens/widget/recent_chat_widget.dart';
-import 'package:startup_social_app/view/screens/widget/list_add_story_card_widgets.dart';
-import 'package:startup_social_app/view/screens/widget/header_label_widget.dart';
+import 'package:startup_social_app/view/widget/custom_app_bar.dart';
+import 'package:startup_social_app/view/widget/custom_submit_button.dart';
+import 'package:startup_social_app/view/widget/header_label_widget.dart';
+import 'package:startup_social_app/view/widget/list_add_story_card_widgets.dart';
+import 'package:startup_social_app/view/widget/list_item_group_suggestion_profile.dart';
+import 'package:startup_social_app/view/widget/list_item_industry_type_widget.dart';
+import 'package:startup_social_app/view/widget/list_item_recent_chat.dart';
+import 'package:startup_social_app/view/widget/post_detail_widget.dart';
+import 'package:startup_social_app/view/widget/social_industry_select_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,47 +18,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Map<String, String>> groupSuggestions = [
-    {
-      'name': 'Riya Korana',
-      'description': 'IT Service group',
-      'count': '3+',
-      'image': 'assets/dp1.png',
-    },
-    {
-      'name': 'Disha Dubey',
-      'description': 'IT Service group',
-      'count': '9+',
-      'image': 'assets/dp2.png',
-    },
-    {
-      'name': 'Deepti Chourasia',
-      'description': 'IT services related',
-      'count': '10+',
-      'image': 'assets/dp3.png',
-    },
-  ];
-  final List<Map<String, String>> recentMessages = [
-    {
-      'profileUrl': 'assets/recent_msg1.png',
-      'name': 'Satyam Sharma',
-      'message': 'You : Are you interested for website',
-      'date': '16/11/2024',
-    },
-    {
-      'profileUrl': 'assets/recent_msg2.png',
-      'name': 'Deepti Chourasia',
-      'message': 'You : Are you interested for website',
-      'date': '10/11/2024',
-    },
-    {
-      'profileUrl': 'assets/recent_msg3.png',
-      'name': 'Riya Singh',
-      'message': 'You : Are you interested for website',
-      'date': '15/11/2024',
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,6 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // ListItemIndustryTypeWidget(),
                     Wrap(
                       children: [
                         SocialIndustrySelectWidget(label: 'Computer Vision'),
@@ -146,44 +107,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 headerTwo: 'Explore',
               ),
               SizedBox(height: 10),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.2,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: groupSuggestions.length,
-                  separatorBuilder: (context, index) => SizedBox(width: 5),
-                  itemBuilder: (context, index) {
-                    final item = groupSuggestions[index];
-                    return GroupAndCommunityUpdatesProfileCustomCard(
-                      count: item['count'] ?? '',
-                      description: item['description'] ?? '',
-                      name: item['name'] ?? '',
-                      profileUrl: item['image'] ?? '',
-                    );
-                  },
-                ),
-              ),
+              ListItemGroupSuggestionProfile(),
+
               SizedBox(height: 12),
               HeaderLabelWidget(
                 headerOne: 'Recent Messages',
                 headerTwo: 'View All',
               ),
               SizedBox(height: 12),
-              ListView.separated(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: recentMessages.length,
-                separatorBuilder: (context, index) => SizedBox(height: 5),
-                itemBuilder: (context, index) {
-                  final item = recentMessages[index];
-                  return RecentChatWidget(
-                    profileUrl: item['profileUrl'] ?? '',
-                    name: item['name'] ?? '',
-                    message: item['message'] ?? '',
-                    date: item['date'] ?? '',
-                  ),
-                },
-              ),
+              ListItemRecentChat(),
               SizedBox(height: 10),
               HeaderLabelWidget(
                 headerOne: 'Recent Posts',

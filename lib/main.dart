@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/view/bottom_navigation_bar/main_bottom_navigation_bar.dart';
+import 'package:startup_social_app/view/screens/main_bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
