@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
-class StoryImageCard extends StatelessWidget {
+class StoryImageCardWidget extends StatelessWidget {
   final String profileUrl;
   final String imageUrl;
   final bool isAddStory;
   final String name;
 
-  const StoryImageCard({
+  const StoryImageCardWidget({
     super.key,
     required this.profileUrl,
     required this.imageUrl,

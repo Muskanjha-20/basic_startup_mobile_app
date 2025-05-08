@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
-import 'package:startup_social_app/custom/recent_post_hash_tag_widget.dart';
+import 'package:startup_social_app/utils/colors.dart';
+import 'package:startup_social_app/view/screens/widget/custom_hash_tag_widget.dart';
 
-class DetailedRecentPostWidget extends StatelessWidget {
-  const DetailedRecentPostWidget({super.key});
+class PostDetailWidget extends StatelessWidget {
+  const PostDetailWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ class DetailedRecentPostWidget extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 3,
               separatorBuilder: (context, index) => SizedBox(width: 3),
-              itemBuilder: (context, index) => RecentPostHashTagWidget(),
+              itemBuilder: (context, index) => CustomHashTagWidget(),
             ),
           ),
           Divider(color: Colors.black, thickness: 0.3),

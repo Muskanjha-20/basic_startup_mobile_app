@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
-class RecentMessageChat extends StatelessWidget {
+class RecentChatWidget extends StatelessWidget {
   final String profileUrl;
   final String name;
   final String message;
   final String date;
 
-  const RecentMessageChat({
+  const RecentChatWidget({
     super.key,
     required this.profileUrl,
     required this.name,

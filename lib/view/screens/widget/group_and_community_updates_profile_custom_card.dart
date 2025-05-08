@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
 class GroupAndCommunityUpdatesProfileCustomCard extends StatelessWidget {
   final String profileUrl;

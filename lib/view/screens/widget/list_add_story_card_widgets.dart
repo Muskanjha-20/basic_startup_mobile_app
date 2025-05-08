@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/custom/story_image_card.dart';
+import 'package:startup_social_app/view/screens/widget/story_image_card_widget.dart';
 
-class AddStoryListWidgets extends StatelessWidget {
-  const AddStoryListWidgets({super.key});
+class ListAddStoryCardWidget extends StatelessWidget {
+  const ListAddStoryCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class AddStoryListWidgets extends StatelessWidget {
         separatorBuilder: (context, index) => const SizedBox(width: 8),
         itemBuilder: (context, index) {
           final story = storyList[index];
-          return StoryImageCard(
+          return StoryImageCardWidget(
             profileUrl: story['profileUrl'] as String,
             imageUrl: story['imageUrl'] as String,
             isAddStory: story['isAddStory'] as bool,

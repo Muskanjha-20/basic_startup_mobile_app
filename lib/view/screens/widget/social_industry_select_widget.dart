@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
-class ListSocialIndustrySelectWidget extends StatefulWidget {
+class SocialIndustrySelectWidget extends StatefulWidget {
   final String label;
 
-  const ListSocialIndustrySelectWidget({super.key, required this.label});
+  const SocialIndustrySelectWidget({super.key, required this.label});
 
   @override
-  _ListSocialIndustrySelectWidgetState createState() =>
-      _ListSocialIndustrySelectWidgetState();
+  _SocialIndustrySelectWidgetState createState() =>
+      _SocialIndustrySelectWidgetState();
 }
 
-class _ListSocialIndustrySelectWidgetState
-    extends State<ListSocialIndustrySelectWidget> {
+class _SocialIndustrySelectWidgetState
+    extends State<SocialIndustrySelectWidget> {
   bool isSelected = false;
 
   @override

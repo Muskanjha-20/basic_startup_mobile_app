@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
-class RecentPostHashTagWidget extends StatelessWidget {
-  const RecentPostHashTagWidget({super.key});
+class CustomHashTagWidget extends StatelessWidget {
+  const CustomHashTagWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

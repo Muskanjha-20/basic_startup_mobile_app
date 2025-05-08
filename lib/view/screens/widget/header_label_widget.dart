@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 
-class TextHeader extends StatelessWidget {
+class HeaderLabelWidget extends StatelessWidget {
   final String headerOne;
   final String headerTwo;
-  const TextHeader({
+  const HeaderLabelWidget({
     super.key,
     required this.headerOne,
     required this.headerTwo,

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
+import 'package:startup_social_app/utils/colors.dart';
 import 'package:startup_social_app/view/screens/home_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class MainBottomNavigationBar extends StatefulWidget {
+  const MainBottomNavigationBar({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainBottomNavigationBar> createState() =>
+      _MainBottomNavigationBarState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainBottomNavigationBarState extends State<MainBottomNavigationBar> {
   int selectedIndex = 0;
 
   final List<Widget> screenOptions = [

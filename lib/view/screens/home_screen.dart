@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:startup_social_app/constants/colors.dart';
-import 'package:startup_social_app/custom/app_bar/custom_app_bar.dart';
-import 'package:startup_social_app/custom/buttons/custom_submit_button.dart';
-import 'package:startup_social_app/custom/group_and_community_updates_profile_custom_card.dart';
-import 'package:startup_social_app/custom/list_social_industry_select_widget.dart';
-import 'package:startup_social_app/custom/detailed_recent_post_widget.dart';
-import 'package:startup_social_app/custom/recent_message_chat.dart';
-import 'package:startup_social_app/custom/add_story_list_widgets.dart';
-import 'package:startup_social_app/custom/text_header.dart';
+import 'package:startup_social_app/utils/colors.dart';
+import 'package:startup_social_app/view/screens/widget/custom_app_bar.dart';
+import 'package:startup_social_app/view/screens/widget/custom_submit_button.dart';
+import 'package:startup_social_app/view/screens/widget/group_and_community_updates_profile_custom_card.dart';
+import 'package:startup_social_app/view/screens/widget/social_industry_select_widget.dart';
+import 'package:startup_social_app/view/screens/widget/post_detail_widget.dart';
+import 'package:startup_social_app/view/screens/widget/recent_chat_widget.dart';
+import 'package:startup_social_app/view/screens/widget/list_add_story_card_widgets.dart';
+import 'package:startup_social_app/view/screens/widget/header_label_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -89,9 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
           // padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
           child: Column(
             children: [
-              AddStoryListWidgets(),
+              ListAddStoryCardWidget(),
               SizedBox(height: 10),
-              TextHeader(
+              HeaderLabelWidget(
                 headerOne: 'Industry Posts for you',
                 headerTwo: 'Explore',
               ),
@@ -110,24 +110,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Wrap(
                       children: [
-                        ListSocialIndustrySelectWidget(
-                          label: 'Computer Vision',
-                        ),
-                        ListSocialIndustrySelectWidget(label: 'CRM'),
-                        ListSocialIndustrySelectWidget(
-                          label: 'Internet of Things',
-                        ),
-                        ListSocialIndustrySelectWidget(label: 'Robotics'),
-                        ListSocialIndustrySelectWidget(
+                        SocialIndustrySelectWidget(label: 'Computer Vision'),
+                        SocialIndustrySelectWidget(label: 'CRM'),
+                        SocialIndustrySelectWidget(label: 'Internet of Things'),
+                        SocialIndustrySelectWidget(label: 'Robotics'),
+                        SocialIndustrySelectWidget(
                           label: 'Business Process Management',
                         ),
-                        ListSocialIndustrySelectWidget(
+                        SocialIndustrySelectWidget(
                           label: 'Logistics Management',
                         ),
-                        ListSocialIndustrySelectWidget(label: 'innovation'),
-                        ListSocialIndustrySelectWidget(label: 'IOT'),
-                        ListSocialIndustrySelectWidget(label: 'User Research'),
-                        ListSocialIndustrySelectWidget(label: 'More +'),
+                        SocialIndustrySelectWidget(label: 'innovation'),
+                        SocialIndustrySelectWidget(label: 'IOT'),
+                        SocialIndustrySelectWidget(label: 'User Research'),
+                        SocialIndustrySelectWidget(label: 'More +'),
                       ],
                     ),
                     SizedBox(height: 6),
@@ -145,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 10),
-              TextHeader(
+              HeaderLabelWidget(
                 headerOne: 'Groups & Community Updates',
                 headerTwo: 'Explore',
               ),
@@ -168,7 +164,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 12),
-              TextHeader(headerOne: 'Recent Messages', headerTwo: 'View All'),
+              HeaderLabelWidget(
+                headerOne: 'Recent Messages',
+                headerTwo: 'View All',
+              ),
               SizedBox(height: 12),
               ListView.separated(
                 physics: NeverScrollableScrollPhysics(),
@@ -177,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 separatorBuilder: (context, index) => SizedBox(height: 5),
                 itemBuilder: (context, index) {
                   final item = recentMessages[index];
-                  return RecentMessageChat(
+                  return RecentChatWidget(
                     profileUrl: item['profileUrl'] ?? '',
                     name: item['name'] ?? '',
                     message: item['message'] ?? '',
@@ -187,9 +186,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SizedBox(height: 10),
 
-              TextHeader(headerOne: 'Recent Posts', headerTwo: 'Explore'),
+              HeaderLabelWidget(
+                headerOne: 'Recent Posts',
+                headerTwo: 'Explore',
+              ),
               SizedBox(height: 10),
-              DetailedRecentPostWidget(),
+              PostDetailWidget(),
             ],
           ),
         ),
