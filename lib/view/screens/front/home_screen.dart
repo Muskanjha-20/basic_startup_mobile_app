@@ -181,11 +181,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     name: item['name'] ?? '',
                     message: item['message'] ?? '',
                     date: item['date'] ?? '',
-                  );
+                  ),
                 },
               ),
               SizedBox(height: 10),
-
               HeaderLabelWidget(
                 headerOne: 'Recent Posts',
                 headerTwo: 'Explore',

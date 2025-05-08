@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:startup_social_app/utils/colors.dart';
-import 'package:startup_social_app/view/screens/home_screen.dart';
+import 'package:startup_social_app/view/screens/front/home_screen.dart';
 
 class MainBottomNavigationBar extends StatefulWidget {
   const MainBottomNavigationBar({super.key});
